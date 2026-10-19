@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Fotos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Capture o que importa.</h1>
+        <p>Capture, personalize e guarde suas fotos.</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Câmera</h2>
+
+            <video id="video" autoplay playsinline></video>
+
+            <p id="mensagem">Ligue a câmera para começar.</p>
+
+            <label for="identificacao">Identificação</label>
+            <input type="text" id="identificacao" placeholder="Digite seu nome">
+
+            <label for="filtro">Filtro</label>
+            <select id="filtro">
+                <option value="original">Original</option>
+                <option value="pb">Preto e branco</option>
+                <option value="negativo">Negativo</option>
+            </select>
+
+            <div class="botoes">
+                <button id="ligar">Ligar câmera</button>
+                <button id="capturar">Capturar</button>
+                <button id="desligar">Desligar câmera</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Foto capturada</h2>
+
+            <img id="foto" alt="Foto capturada">
+
+            <button id="baixar" disabled>Baixar foto</button>
+
+            <canvas id="canvas" hidden></canvas>
+        </section>
+
+        <section class="card galeria">
+            <h2>Galeria de fotos</h2>
+            <p id="contador">Nenhuma foto capturada.</p>
+
+            <div id="miniaturas" class="miniaturas"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

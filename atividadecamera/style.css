@@ -1,0 +1,169 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background: #111315;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p,
+#mensagem,
+#contador {
+    color: #aaa;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    background: #1c1f22;
+    border: 1px solid #303438;
+    border-radius: 12px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+video,
+#foto {
+    display: block;
+    width: 100%;
+    min-height: 220px;
+    max-height: 400px;
+    object-fit: contain;
+    background: #090a0b;
+    border-radius: 8px;
+}
+
+video {
+    transform: scaleX(-1);
+}
+
+#foto:not([src]) {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #3a3e43;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input,
+select {
+    background: #111315;
+    color: white;
+}
+
+button {
+    background: #2478e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1763c4;
+}
+
+button:disabled {
+    background: #41454a;
+    cursor: not-allowed;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.botoes button:last-child {
+    grid-column: 1 / -1;
+    background: #41454a;
+}
+
+#baixar {
+    margin-top: 12px;
+}
+
+.galeria {
+    grid-column: 1 / -1;
+}
+
+.miniaturas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.miniatura {
+    overflow: hidden;
+    background: #111315;
+    border: 1px solid #35393d;
+    border-radius: 8px;
+}
+
+.miniatura img {
+    width: 100%;
+    height: 130px;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.miniatura p {
+    margin: 8px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.miniatura button {
+    border-radius: 0;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria {
+        grid-column: auto;
+    }
+}
