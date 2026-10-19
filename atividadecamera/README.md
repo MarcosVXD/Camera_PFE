@@ -1,9 +1,8 @@
 
 # Captura de Fotos
 
-## Integrantes
-- Nome do integrante 1
-- Nome do integrante 2
+## Integrante
+- Marcos
 
 ## Descrição
 Aplicação web que permite capturar fotos com a câmera, aplicar filtros e adicionar uma identificação com a data e a hora.
@@ -23,7 +22,4 @@ Aplicação web que permite capturar fotos com a câmera, aplicar filtros e adic
 - Visualizar e baixar a imagem.
 - exibir fotos em minatura como galeria 
 
-## Como executar
-1. Abra o projeto no Visual Studio Code.
-2. Inicie o index.html com o Live Server.
-3. Permita o acesso à câmera.
+
